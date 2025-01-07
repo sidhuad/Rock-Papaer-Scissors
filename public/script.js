@@ -1,3 +1,5 @@
+// jan/7/2025:: displaying tries at startup is working now, it also now updates with every user click, this worked when tries box was moved after tries-- in if statement under for loop in playGame() function
+
 
 // creating an array of all the card elements
 const cards = document.getElementsByClassName('card');
@@ -13,6 +15,7 @@ const triesBox = document.getElementsByClassName('tries');
 styleComputerBattleCard.innerHTML = "";
 stylePlayerBattleCard.innerHTML = "";
 
+
 // variables for score keeping
 let winScore = 0;
 let tieScore = 0 ;
@@ -20,6 +23,9 @@ let losseScore = 0;
 
 // number of tries a player get
 let tries = 10;
+
+// displaying tries left at the startup
+triesBox[0].children[0].innerHTML = `Tries Left: ${tries}`;
 
 
 
@@ -63,8 +69,6 @@ const playGame = () =>
             stylePlayerBattleCard.style.backgroundImage = `url("/assets/images/${playerChoice}.jpg")`;
             styleComputerBattleCard.style.backgroundImage = `url("/assets/images/${compChoice}.jpg")`;
 
-            triesBox[0].children[0].innerHTML = `Tries Left: ${tries}`;
-
                 
             if (tries != 0) {
                 
@@ -96,9 +100,12 @@ const playGame = () =>
                         alertMessage[0].children[0].innerHTML = "YOU WON (⌐■_■)";
                     }
                 tries--;
-                console.log(tries);  
+                console.log(tries);
+                triesBox[0].children[0].innerHTML = `Tries Left: ${tries}`;
             }
-            if( tries === 0)
+            
+            // else if condition would not work
+            if( tries == 0)
             {
                 stylePlayerBattleCard.setAttribute('style',"visibility:hidden;");
                 styleComputerBattleCard.setAttribute('style',"visibility:hidden;");
