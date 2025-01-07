@@ -1,0 +1,143 @@
+body,html{
+    display: block;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Dune Rise', sans-serif;
+    font-weight: bold;
+}
+
+.header
+{
+    border-bottom: 1.8px solid grey;
+    height: 15%;
+    color: gray;
+}
+.header h1{
+    margin: 0;
+    padding-top: 20px;
+    text-align: center;
+}
+.header h1:after
+{
+    content: ' ';
+    background: url("/assets/images/logo.png") no-repeat;
+    position: absolute;
+    background-size: 40px;
+    height:42px;
+    width: 42px;
+}
+.main
+{
+    height: 55%;
+    display: block;
+    overflow: hidden;
+}
+.mainCard
+{
+    max-height: 100px;
+    height: 100px;
+    width: 100px;
+    display: block;
+    position: relative;
+    border-radius: 50%;
+}
+#playerCard
+{
+    top: 60%;
+    left: 44%;
+    background-size: cover;
+}
+#playerCard::after
+{
+    content: "Player";
+    position: relative;
+    top: 110px;
+    left: 6px;
+}
+#computerCard
+{
+    top: -22%;
+    right: -44%;
+    background-size: cover;
+}
+#computerCard::after
+{
+    content: "Computer";
+    position: relative;
+    top: -21px;
+    left: -12px;
+}
+.footer
+{
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    border-top: 1.8px solid grey; 
+}
+.card
+{
+    max-height: 100px;
+    width: 100px;
+    margin: 40px 20px;
+    transition: translate 0.1s linear;
+    box-shadow: 2px 4px 9px 2px rgb(139, 139, 139);
+    translate: 0px 0px;
+    border-radius: 50%;
+    
+}
+#rock
+{
+    background-image: url(/assets/images/rock.jpg);
+    background-size: cover;
+}
+#paper
+{
+    background-image: url(/assets/images/paper.jpg);
+    background-size: cover;
+}
+#scissor
+{
+    background-image: url(/assets/images/scissor.jpg);
+    background-size: cover;
+}
+.card:hover
+{
+    translate: 0px -10px;
+    cursor: pointer;
+}
+.alert
+{
+    height: 100px;
+    width: 420px;
+    position: relative;
+    border-radius: 20px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    left: 18px;
+    top: -85px;
+    visibility: hidden;
+    font-size: 14px;
+}
+.scoreCard
+{
+    width: 200px;
+    position: relative;
+    top: -44%;
+    padding: 5px;
+    visibility: hidden;
+}
+.scoreCard p
+{
+    padding: 5px 5px;
+}
+.tries
+{
+    width: 200px;
+    position: relative;
+    top: -95%;
+    padding: 5px;
+}
