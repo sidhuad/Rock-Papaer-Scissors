@@ -75,8 +75,7 @@ const playGame = () =>
                 if (compChoice == playerChoice)
                     {
                         ++tieScore;
-                        // alert("IT'S A TIE");
-                        // console.log("IT'S A TIE");
+                        
                         alertMessage[0].children[0].setAttribute('style',"visibility:visible; color:Black");
                         alertMessage[0].children[0].innerHTML = "Its A Tie (⊙_⊙;)";
                         
@@ -86,16 +85,14 @@ const playGame = () =>
                             (compChoice == "paper" && playerChoice == "rock"))
                     {
                         ++losseScore;
-                        // alert("YOU LOOSE ¯\_(ツ)_/¯"); 
-                        // console.log("YOU LOOSE ¯\_(ツ)_/¯");
+                        
                         alertMessage[0].children[0].setAttribute('style',"visibility:visible; color:red; opacity:0.8")
                         alertMessage[0].children[0].innerHTML = "YOU LOOSE ¯\_(ツ)_/¯";                      
                     }
                     else
                     {
                         ++winScore;
-                        // alert("🎉🎉🎉🎉 YOU WON 🎉🎉🎉🎉");
-                        // console.log("🎉🎉🎉🎉 YOU WON 🎉🎉🎉🎉");
+                        
                         alertMessage[0].children[0].setAttribute('style',"visibility:visible; color:green");
                         alertMessage[0].children[0].innerHTML = "YOU WON (⌐■_■)";
                     }
@@ -104,7 +101,7 @@ const playGame = () =>
                 triesBox[0].children[0].innerHTML = `Tries Left: ${tries}`;
             }
             
-            // else if condition would not work
+            // else if condition does not work
             if( tries == 0)
             {
                 stylePlayerBattleCard.setAttribute('style',"visibility:hidden;");
