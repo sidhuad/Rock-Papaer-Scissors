@@ -66,8 +66,8 @@ const playGame = () =>
             // console.log(`computer choice: ${compChoice}`);
 
             // adding background image style to the player card and computer card.
-            stylePlayerBattleCard.style.backgroundImage = `url("/assets/images/${playerChoice}.jpg")`;
-            styleComputerBattleCard.style.backgroundImage = `url("/assets/images/${compChoice}.jpg")`;
+            stylePlayerBattleCard.style.backgroundImage = `url("./assets/images/${playerChoice}.jpg")`;
+            styleComputerBattleCard.style.backgroundImage = `url("./assets/images/${compChoice}.jpg")`;
 
                 
             if (tries != 0) {
