@@ -1,0 +1,140 @@
+body{
+    font-family: 'Dune Rise', sans-serif;
+    font-weight: bold;
+    /* max-width:80%; */
+}
+.header
+{
+    border-bottom: 1.8px solid grey;
+    height: 15%;
+    color: gray;
+}
+.header h1{
+    margin: 0;
+    padding-top: 20px;
+    text-align: center;
+}
+.header h1:after
+{
+    content: ' ';
+    background: url("/assets/images/logo.png") no-repeat;
+    position: absolute;
+    background-size: 40px;
+    height:42px;
+    width: 42px;
+}
+.main
+{
+    height: calc(100vh-);
+    display: block;
+    /* overflow: hidden; */
+}
+.mainCard
+{
+    max-height: 100px;
+    height: 100px;
+    width: 100px;
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    align-self: anchor-center;
+}
+#playerCard
+{
+    /* position: absolute;
+    top: 60%;
+    left: 44%; */
+    bottom: 30px;
+    background-size: cover;
+}
+#playerCard::after
+{
+    content: "Player";
+    position: relative;
+    top: 106px;
+    left: 6px;
+}
+#computerCard
+{
+    top: -45px;
+    background-size: cover;
+}
+#computerCard::after
+{
+    content: "Computer";
+    position: relative;
+    left: -12px;
+    top: -28px;
+}
+.footer
+{
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    border-top: 1.8px solid grey; 
+}
+.card
+{
+    max-height: 100px;
+    width: 100px;
+    margin: 20px 10px;
+    transition: translate 0.1s linear;
+    box-shadow: 2px 4px 9px 2px rgb(139, 139, 139);
+    translate: 0px 0px;
+    border-radius: 50%;
+   
+}
+#rock
+{
+    background-image: url(/assets/images/rock.jpg);
+    background-size: cover;
+    height: 217px;
+}
+#paper
+{
+    background-image: url(/assets/images/paper.jpg);
+    background-size: cover;
+    height: 217px;
+
+}
+#scissor
+{
+    background-image: url(/assets/images/scissor.jpg);
+    background-size: cover;
+    height: 217px;
+}
+.card:hover
+{
+    translate: 0px -10px;
+    cursor: pointer;
+}
+.alert
+{
+    height: 100px;
+    width: 420px;
+    border-radius: 20px;
+    visibility: hidden;
+    font-size: 14px;
+    align-self: center;
+    top: -45px;
+    text-align: center;
+}
+.scoreCard
+{
+    width: 200px;
+    text-align: left;
+    z-index: -1;
+    /* position: relative; */
+    /* top: -44%; */
+    /* padding: 5px; */
+    visibility: hidden;
+}
+.scoreCard p
+{
+    padding: 5px 5px;
+}
+.tries
+{
+    width: 200px;
+    padding: 5px;
+}
