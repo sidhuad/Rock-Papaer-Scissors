@@ -86,20 +86,20 @@ body{
 }
 #rock
 {
-    background-image: url(/assets/images/rock.jpg);
+    background-image: url("./assets/images/rock.jpg");
     background-size: cover;
     height: 217px;
 }
 #paper
 {
-    background-image: url(/assets/images/paper.jpg);
+    background-image: url("./assets/images/paper.jpg");
     background-size: cover;
     height: 217px;
 
 }
 #scissor
 {
-    background-image: url(/assets/images/scissor.jpg);
+    background-image: url("./assets/images/scissor.jpg");
     background-size: cover;
     height: 217px;
 }
