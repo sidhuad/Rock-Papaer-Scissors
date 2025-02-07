@@ -104,8 +104,8 @@ const playGame = () =>
             // else if condition does not work
             if( tries == 0)
             {
-                stylePlayerBattleCard.setAttribute('style',"visibility:visible;");
-                styleComputerBattleCard.setAttribute('style',"visibility:visible;");
+                stylePlayerBattleCard.setAttribute('style',"visibility:hidden;");
+                styleComputerBattleCard.setAttribute('style',"visibility:hidden;");
                 alertMessage[0].children[0].setAttribute('style',"visibility:visible; color:Black");
                 alertMessage[0].children[0].innerHTML = "GAME OVER";
                 score();
